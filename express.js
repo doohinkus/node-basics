@@ -30,6 +30,8 @@ app.get('/hello/:name', (req, res, next) => {
 });
 
 app.get('/throw', (req,res, next) => {
+    //THIS IS BAD  PRACTICE. ALWAYS USE NEXT
+    //eg next(new Error('Something got fucked up!!! Check below: '));
     throw new Error('Something got fucked up!!! Check below: ')
 });
 app.get('/next', (req,res, next) => {
